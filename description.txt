@@ -26,12 +26,12 @@ pass * oznacza alert
 				2s dłuższe piki
 			2s stayman rozkładowy*
 				2n 5!c
-					3cl pyt o dubla
+					3c pyt o dubla
 						3d karo
 						3h kier
 						3s pik
 				3c 5!d
-					3cl pyt o dubla
+					3c pyt o dubla
 						3d kier
 						3h pik
 						3s trefl

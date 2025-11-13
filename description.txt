@@ -31,10 +31,10 @@ pass * oznacza alert
 						3h kier
 						3s pik
 				3c 5!d
-					3c pyt o dubla
-						3d kier
-						3h pik
-						3s trefl
+					3d pyt o dubla
+						3h kier
+						3s pik
+						3n trefl
 				3d dubel kier 3244
 				3h dubel pik 2344
 				3s 4!c 3334

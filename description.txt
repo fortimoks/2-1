@@ -19,10 +19,49 @@ pass * oznacza alert
 1h 11-21 5+!h
 1s 11-21 5+!s
 1nt (14)15-17 bal
+	2c stayman (rozkładowy)
+		2d brak 4!h/!s
+			2h śmieciowiec
+				p dłuższe kiery
+				2s dłuższe piki
+			2s stayman rozkładowy*
+				2n 5!c
+					3cl pyt o dubla
+						3d karo
+						3h kier
+						3s pik
+				3c 5!d
+					3cl pyt o dubla
+						3d kier
+						3h pik
+						3s trefl
+				3d dubel kier 3244
+				3h dubel pik 2344
+				3s 4!c 3334
+				3n 4!d 3343
+			3h 4!h 5!s GF
+				3n preferencja
+					4h 4!h 6!s
+			3s 4!s 5!h GF
+				3n preferencja
+					4d 4!s 6!h
+		2h 4!h, może 4!s
+			2s 4!h 5!s inwit
+		2s 4!s
+	2d transfer na kiery
+	2h
+	2s
+	2n
+	3c
+	3d
+	3h
+	3s
+	3n
+	4d texas
+	4h texas
 #gdanski trefl
 2c 11-14 5+!c bez 4!h/!s *wszystko do alertu
 	@ W dalszej licytacji obowiązuje wywołanie końcowe oraz odzywka szlemowo-wywoławcza
-	@ http://brydz.wikidot.com/wywolanie-koncowe http://brydz.wikidot.com/osw 
 	2d relay GF
 		2h 3!h możliwe 3!s
 			2n GF
@@ -37,12 +76,12 @@ pass * oznacza alert
 						3n dubel !s
 				3h  1345/0346 dół
 					3s pyt singiel/renons
-					3n singiel !s
-					4c renons !s
+						3n singiel !s
+						4c renons !s
 				3s  1345/0346 góra
 					3n pyt singiel/renons
-					4c singiel !s
-					4d renons !s
+						4c singiel !s
+						4d renons !s
 				3n  6+!c/2326 góra
 		2s 3!s
 			2n NF
@@ -55,12 +94,12 @@ pass * oznacza alert
 				3d  3235 góra
 				3h  3145/3046 dół
 					3s pyt singiel/renons
-					3n singiel !h
-					4c renons !h
+						3n singiel !h
+						4c renons !h
 				3s  3145/3046 góra
 					3n pyt singiel/renons
-					4c singiel !h
-					4d renons !h
+						4c singiel !h
+						4d renons !h
 				3n  6+!c/3226 góra
 		2n 6+!c dół
 			3d GF
@@ -102,3 +141,11 @@ pass * oznacza alert
 		@ 6 w kolor to pytanie o dubla lub damę 
 			@ 6 atu nie mam
 			@ 7 atu mam
+			
+function kings(start_bid)
+	?$(start_bid) no kings
+	$(start_bid + 1) king of ♣ or ♦+♥
+	$(start_bid + 2) king of ♦ or ♣+♥
+	$(start_bid + 3) king of ♥ or ♣+♦
+	$(start_bid + 4) kings of ♣+♦+♥
+end

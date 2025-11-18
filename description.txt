@@ -7,11 +7,40 @@ pass * oznacza alert
 		1h otw
 			2c góra 4+!h
 				2d pełnoprawne otwarcie
+					2h unbal 5!s
+					2s unbal 4!h 5+!s
+					2n relay
+						3c automat
+							3d 5!d 4252
+							3h 5!c 4225
+					3c unbal 4!h 5+!c
+					3d unbal 4!h 5+!d
+					3h bal 4!s dowolne 4432
+					3s bal 5!s dowolne 5332
+					3n 3433
+					4c splinter !c
+					4d splinter !d
+					4h splinter !s
 				2h naciągane było
 			2d góra 3!h
 		1s otw
 			2c góra 4+!s
 				2d pełnoprawne otwarcie
+					2h unbal 4!s 5+!h
+					2s unbal 5!s
+					2n relay
+						3c automat
+							3d 5!d 4252
+							3h 5!h 4522
+							3s 5!c 4225
+					3c unbal 4!s 5+!c
+					3d unbal 4!s 5+!d
+					3h bal 5!s dowolne 5332
+					3s bal 4!s dowolne 4432
+					3n 4333
+					4c splinter !c
+					4d splinter !d
+					4h splinter !h
 				2s naciągane było
 			2d góra 3!s
 1c 11-21 lepszy młodszy
@@ -35,8 +64,8 @@ pass * oznacza alert
 						3h kier
 						3s pik
 						3n trefl
-				3d dubel kier 3244
-				3h dubel pik 2344
+				3d 3!h 2344
+				3h 3!s 3244
 				3s 4!c 3334
 				3n 4!d 3343
 			3h 4!h 5!s GF
@@ -48,23 +77,49 @@ pass * oznacza alert
 		2h 4!h, może 4!s
 			2s 4!h 5!s inwit
 		2s 4!s
-	2d transfer na kiery
-	2h
-	2s
-	2n
-	3c
-	3d
-	3h
-	3s
-	3n
+	2d transfer na kiery albo młode
+		2h automat
+			2s młode GF
+				2n automat
+					3c 5!c 2245
+					3d 5!d 2254
+					3h 3!h 2344
+					3s 3!s 3244
+			2n bal 5!h
+	2h transfer na piki
+		2s automat
+		3s 17pc 4!s
+	2s inwit albo trefle 
+		2n nie przyjmuję
+			3c trefle
+		3c przyjmuje
+			3n do gry
+	2n transfer na kara
+	3c 2/3 górne figury 6!c
+	3d 2/3 górne figury 6!d
+	3h 5-4 młode i 3!h GF
+	3s 5-4 młode i 3!s GF
+	3n do gry
+	4c gerber
+		4d 0/3 asy
+		4h 1/4 asy
+		4s 2 asy
 	4d texas
 	4h texas
+	4n inwit do 6nt
+		pass nie przyjmuje
+		5c 0/3 asy
+		5d 1/4 asy
+		5h 2 asy
+	5n inwit do 7nt bez asów
+		6n nie mam 4 asów
+		7n mam 4 asy
 #gdanski trefl
 2c 11-14 5+!c bez 4!h/!s *wszystko do alertu
 	@ W dalszej licytacji obowiązuje wywołanie końcowe oraz odzywka szlemowo-wywoławcza
-	2d relay GF
+	2d  relay forcing
 		2h 3!h możliwe 3!s
-			2n GF
+			2n relay GF
 				3c 6!c/3!h dół
 					3d pyt o krótkość
 						3h singiel !d
@@ -108,9 +163,9 @@ pass * oznacza alert
 				3n 2236 12-13pc
 		3c 5!c 4!d bez 3!h/!s
 		3d 6+!c 4!d bez 3!h/!s góra
-			3h pyt o singla
-				3s singiel !h
-				3n singiel !s
+			3h pyt o krótkość 
+				3s krótkość !h
+				3n krótkość !s
 		3h 6+!c góra krótkość !h
 		3s 6+!c góra krótkość !s
 		3n 6+!c góra monokolor
@@ -125,6 +180,23 @@ pass * oznacza alert
 2n 20-21 bal
 @ wszystko na poz 3 to bloki
 3n gambling
+	4c pasuj/popraw na 4!d
+	4d sztuczny forcing
+		4h splinter !h
+		4s splinter !s
+		4n semibal 2227/2272
+		5c splinter !d
+		5d splinter !c
+	4h do gry
+	4s do gry
+	5cl pasuj/popraw na 5!d
+@ obrony
+	(3n) gambling
+		x karna
+		4c stare z preferencją kier
+		4d stare z preferencją pik
+		4h do gry
+		4s do gry
 @ strefa szlemikowa
 	4nt Blackwood
 		5c 0/3

@@ -189,7 +189,7 @@ pass * oznacza alert
 		5d splinter !c
 	4h do gry
 	4s do gry
-	5cl pasuj/popraw na 5!d
+	5c pasuj/popraw na 5!d
 @ obrony
 	(3n) gambling
 		x karna
